@@ -1,4 +1,4 @@
-package java.com.workshop;
+package java.com.projektgruppe_2.workshop;
 
 public class Actuator {
 

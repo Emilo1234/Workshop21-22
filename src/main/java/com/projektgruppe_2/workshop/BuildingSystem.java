@@ -1,4 +1,4 @@
-package java.com.workshop;
+package java.com.projektgruppe_2.workshop;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +15,17 @@ public class BuildingSystem {
      */
     public BuildingSystem(){
         buildings = new ArrayList<>();
+
+        Building sdu = new Building("Syddansk universitet");
+        Sensor sensor = new Sensor("SDU Sensor 1", SensorType.TEMPERATURE, 20);
+        sdu.addSensor(sensor);
+        Actuator actuator = new Actuator("SDU Actuator 1", 22);
+        sdu.addActuator(actuator);
+        addBuilding(sdu);
+
+        for(Building building : buildings){
+            building.getSensors().get(0).toString();
+        }
     }
 
     /**
